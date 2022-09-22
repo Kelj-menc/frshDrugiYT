@@ -16,5 +16,20 @@ namespace frshDrugiYT
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lblHello.Text = "Hello World";
+        }
+
+        private void btnSet_Click(object sender, EventArgs e)
+        {
+            lblHello.Text = "Hello world again..";
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            lblHello.Text = "Text has been canceled";
+        }
     }
 }

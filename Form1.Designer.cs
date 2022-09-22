@@ -1,4 +1,6 @@
-﻿namespace frshDrugiYT
+﻿using System;
+
+namespace frshDrugiYT
 {
     partial class Form1
     {
@@ -28,39 +30,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblHello = new System.Windows.Forms.Label();
+            this.btnSet = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblHello
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(171, 51);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LabelBre";
+            this.lblHello.AutoSize = true;
+            this.lblHello.Location = new System.Drawing.Point(256, 78);
+            this.lblHello.Name = "lblHello";
+            this.lblHello.Size = new System.Drawing.Size(73, 20);
+            this.lblHello.TabIndex = 0;
+            this.lblHello.Text = "LabelBre";
             // 
-            // button1
+            // btnSet
             // 
-            this.button1.Location = new System.Drawing.Point(124, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSet.Location = new System.Drawing.Point(118, 293);
+            this.btnSet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(112, 35);
+            this.btnSet.TabIndex = 1;
+            this.btnSet.Text = "Set";
+            this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(260, 293);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(112, 35);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(511, 293);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(112, 35);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(800, 449);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSet);
+            this.Controls.Add(this.lblHello);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,8 +96,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblHello;
+        private System.Windows.Forms.Button btnSet;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnLogout;
+        private EventHandler btnCancel_Click;
     }
 }
 
